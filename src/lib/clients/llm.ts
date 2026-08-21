@@ -1,8 +1,8 @@
 import Groq from "groq-sdk";
 import OpenAI from "openai";
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || "dummy_key_for_build" });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "dummy_key_for_build" });
 
 export class LLMClient {
   static async classifyAndGenerateGuidance(text: string, language: string) {
