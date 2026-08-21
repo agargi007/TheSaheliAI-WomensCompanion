@@ -1,0 +1,98 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+  }
+  :root {
+    /* Base Shadcn Colors */
+    --background: 43 100% 94%; /* #FFF8E1 */
+    --foreground: 210 29% 24%; /* #2C3E50 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 210 29% 24%; /* #2C3E50 */
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 210 29% 24%; /* #2C3E50 */
+    
+    /* Primary (Warm Orange) */
+    --primary: 16 100% 60%; /* #FF6B35 */
+    --primary-foreground: 0 0% 100%; /* White */
+    
+    /* Secondary (Text Light) */
+    --secondary: 200 18% 40%; /* #546E7A */
+    --secondary-foreground: 0 0% 100%; /* White */
+    
+    /* Muted */
+    --muted: 40 100% 90%; 
+    --muted-foreground: 200 18% 40%; /* #546E7A */
+    
+    /* Accent */
+    --accent: 40 100% 90%;
+    --accent-foreground: 210 29% 24%; /* #2C3E50 */
+    
+    /* Destructive/Emergency */
+    --destructive: 0 65% 51%; /* #D32F2F */
+    --destructive-foreground: 0 0% 100%; /* White */
+    
+    /* Borders and Inputs */
+    --border: 0 0% 88%; /* #E0E0E0 */
+    --input: 0 0% 88%; /* #E0E0E0 */
+    --ring: 16 100% 60%; /* Primary #FF6B35 */
+    
+    /* Radii */
+    --radius: 0.75rem;
+
+    /* Custom specific colors */
+    --emergency: 0 65% 51%;
+    --emergency-dark: 0 74% 41%;
+    --success: 122 46% 34%;
+    --warning: 30 92% 53%;
+  }
+
+  .dark {
+    --background: 210 29% 10%; /* Very dark slate */
+    --foreground: 43 100% 94%; /* Light cream */
+    --card: 210 29% 14%;
+    --card-foreground: 43 100% 94%;
+    --popover: 210 29% 14%;
+    --popover-foreground: 43 100% 94%;
+    --primary: 16 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 18% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 29% 20%;
+    --muted-foreground: 200 18% 60%;
+    --accent: 210 29% 20%;
+    --accent-foreground: 43 100% 94%;
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 29% 20%;
+    --input: 210 29% 20%;
+    --ring: 16 100% 60%;
+    
+    --emergency: 0 65% 51%;
+    --emergency-dark: 0 74% 41%;
+    --success: 122 46% 34%;
+    --warning: 30 92% 53%;
+  }
+  
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
