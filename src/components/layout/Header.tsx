@@ -46,6 +46,7 @@ export default function Header() {
 
       {/* Language Selector (Top Center) */}
       <DropdownMenu>
+        {/* @ts-ignore - Radix UI DropdownMenuTrigger asChild type issue */}
         <DropdownMenuTrigger asChild>
           <Button variant="outline" className="flex items-center gap-2">
             <Globe className="h-4 w-4" />
